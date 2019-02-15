@@ -32,18 +32,18 @@ type Incident struct {
 	CreatedAt            string            `json:"created_at,omitempty"`
 	PendingActions       []PendingAction   `json:"pending_actions,omitempty"`
 	IncidentKey          string            `json:"incident_key,omitempty"`
-	Service              APIObject         `json:"service,omitempty"`
+	Service              *APIObject        `json:"service,omitempty"`
 	Assignments          []Assignment      `json:"assignments,omitempty"`
 	Acknowledgements     []Acknowledgement `json:"acknowledgements,omitempty"`
 	LastStatusChangeAt   string            `json:"last_status_change_at,omitempty"`
-	LastStatusChangeBy   APIObject         `json:"last_status_change_by,omitempty"`
-	FirstTriggerLogEntry APIObject         `json:"first_trigger_log_entry,omitempty"`
-	EscalationPolicy     APIObject         `json:"escalation_policy,omitempty"`
+	LastStatusChangeBy   *APIObject        `json:"last_status_change_by,omitempty"`
+	FirstTriggerLogEntry *APIObject        `json:"first_trigger_log_entry,omitempty"`
+	EscalationPolicy     *APIObject        `json:"escalation_policy,omitempty"`
 	Teams                []APIObject       `json:"teams,omitempty"`
 	Urgency              string            `json:"urgency,omitempty"`
 	Status               string            `json:"status,omitempty"`
 	Id                   string            `json:"id,omitempty"`
-	Priority             APIObject         `json:"priority,omitempty"`
+	Priority             *APIObject        `json:"priority,omitempty"`
 }
 
 // ListIncidentsResponse is the response structure when calling the ListIncident API endpoint.
